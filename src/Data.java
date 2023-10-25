@@ -16,6 +16,7 @@ public class Data<T> {
     }
 
     public static List<Data> dataGeneratorList(int size){
+        int b;
         List<Data> dataList = new ArrayList<>();
         for (int i = 0; i < size; i++)
             dataList.add(new Data(23, 0));
