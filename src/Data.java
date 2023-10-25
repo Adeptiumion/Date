@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Data<T> {
     private T hours;
     private T minutes;
@@ -10,6 +13,13 @@ public class Data<T> {
     @Override
     public String toString() {
         return parser(hours) + ":" + parser(minutes);
+    }
+
+    public static List<Data> dataGeneratorList(int size){
+        List<Data> dataList = new ArrayList<>();
+        for (int i = 0; i < size; i++)
+            dataList.add(new Data(23, 0));
+        return dataList;
     }
 
     private String parser(T time){
